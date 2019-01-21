@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-HELLO_MESSAGE = b"hello funny world!!"
+HELLO_MESSAGE = "hello funny world!!"
 
 @app.route("/")
 def helloworld():

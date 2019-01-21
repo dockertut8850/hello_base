@@ -15,4 +15,4 @@ def test_request(client):
 
     resp = client.get("/")
     assert resp.status_code == 200
-    assert resp.data.rfind(HELLO_MESSAGE) >= 0
+    assert resp.data.rfind(bytes(HELLO_MESSAGE.encode("utf-8"))) >= 0
