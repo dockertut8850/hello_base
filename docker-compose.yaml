@@ -1,0 +1,15 @@
+version: '2'
+
+services: 
+
+  base:
+    build: .
+    image: hello_base
+    ports:
+      - 5000:5000
+
+  test_base:
+    image: hello_base
+    command: pytest-3
+    depends_on: 
+      - base
